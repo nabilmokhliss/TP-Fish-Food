@@ -179,7 +179,53 @@ footer {
     margin-top: 20px;
 }
 
-.whatsapp {
+.share {
+    background-color: #e5f8f8;
+    height: fit-content;
+    width: 60px;
+    position: fixed;
+    top: 400px;
+    left: 0px;
+    box-shadow: 5px 5px 7px #2F9696;
+}
+
+.share div:hover {
+    transform: scale(1.2) translateX(0.2em);
+}
+
+.icon-fb {
+    color: #1977F3;
+    font-size: 45px;
+    margin-left: 8px;
+}
+
+
+.icon-ig {
+    color: #C008E4;
+    font-size: 45px;
+    margin-left: 10px;
+}
+
+.icon-wtsp {
+    color: #03C100;
+    font-size: 45px;
+    margin-left: 10px;
+}
+
+.icon-twitttter {
+    color: #1DA1F3;
+    font-size: 45px;
+    margin-left: 10px;
+}
+
+.icon-yt {
+    color: #F70000;
+    font-size: 45px;
+    margin-left: 5px;
+}
+
+
+/* .whatsapp {
     background-color: #03C100;
     position: fixed;
     bottom: 30px;
@@ -195,7 +241,7 @@ footer {
     color: white;
     font-size: 40px;
     margin: 10px
-}
+} */
 
 /* .whatsapp {
     position: fixed;
@@ -214,7 +260,7 @@ footer {
     color: white;
 } */
 
-.facebook {
+/* .facebook {
     background-color: white;
     position: fixed;
     bottom: 100px;
@@ -229,9 +275,9 @@ footer {
 .icon-fb {
     color: #1977F3;
     font-size: 45px;
-}
+} */
 
-.instagram {
+/* .instagram {
     background-color: white;
     position: fixed;
     bottom: 170px;
@@ -246,4 +292,104 @@ footer {
 .icon-ig {
     color: #C008E4;
     font-size: 45px;
+} */
+
+.wrapper {
+    display: inline-flex;
+}
+
+.wrapper .icon {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .icon span {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.wrapper .icon span i {
+    font-size: 25px;
+    line-height: 60px; /*centrer icon au milieu*/
+}
+
+.wrapper .icon:hover span i {
+    color: #fff;
+}
+
+.wrapper .icon .tooltip {
+    position: absolute;
+    top: 0px;
+    background-color: #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+    
+}
+
+.wrapper .icon .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #3b5999;
+}
+
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #46C1F6;
+}
+
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #DE463B;
+}
+
+.wrapper .whatsapp:hover span,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+    background: #03C100;
 }
