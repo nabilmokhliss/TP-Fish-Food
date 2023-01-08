@@ -184,9 +184,11 @@ footer {
     height: fit-content;
     width: 60px;
     position: fixed;
-    top: 400px;
+    top: 200px;
     left: 0px;
     box-shadow: 5px 5px 7px #2F9696;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .share div:hover {
@@ -201,7 +203,14 @@ footer {
 
 
 .icon-ig {
-    color: #C008E4;
+    /* color: #C008E4;
+    font-size: 45px;
+    margin-left: 10px; */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
     font-size: 45px;
     margin-left: 10px;
 }
